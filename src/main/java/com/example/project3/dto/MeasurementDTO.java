@@ -14,7 +14,7 @@ public class MeasurementDTO {
     @Column(name = "value")
     @Min(value = -100, message = "The permissible temperature range is from -100 to 100")
     @Max(value = 100, message = "The permissible temperature range is from -100 to 100")
-    private int value;
+    private double value;
 
     @Column(name = "raining")
     private boolean raining;

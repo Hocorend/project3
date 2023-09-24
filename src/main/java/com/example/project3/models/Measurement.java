@@ -20,7 +20,7 @@ public class Measurement {
     @Column(name = "value")
     @Min(value = -100, message = "The permissible temperature range is from -100 to 100")
     @Max(value = 100, message = "The permissible temperature range is from -100 to 100")
-    private int value;
+    private double value;
 
     @Column(name = "raining")
     private boolean raining;
@@ -29,7 +29,7 @@ public class Measurement {
     @JoinColumn(name = "sensor_id", referencedColumnName = "id")
     private Sensor sensor;
 
-    public Measurement(int value, boolean raining, Sensor sensor) {
+    public Measurement(double value, boolean raining, Sensor sensor) {
         this.value = value;
         this.raining = raining;
         this.sensor = sensor;
